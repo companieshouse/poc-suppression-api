@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3f33a8f-0436-4844-9a5b-d35e0517eb08" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/address.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/document.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/item.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/links.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/payment-response.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/suppression-response.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/dto/suppression.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/schemas/suppression.schema.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/suppressions/suppressions.module.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eSCeLUrwB8BUM6MmQdHuxKnClp" />
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/model" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/suppressions" />
+      <recent name="$PROJECT_DIR$/src/controller" />
+      <recent name="$PROJECT_DIR$/src/service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.SuppressionController.create suppressions">
+    <configuration name="SuppressionController" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/suppressions/controller/suppressions.controller.spec.ts" />
+      <test-names>
+        <test-name value="SuppressionController" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SuppressionController.create suppressions" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/suppressions/controller/suppressions.controller.spec.ts" />
+      <test-names>
+        <test-name value="SuppressionController" />
+        <test-name value="create suppressions" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SuppressionController.create suppressions.should throw exception when missing auth user header" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/suppressions/controller/suppressions.controller.spec.ts" />
+      <test-names>
+        <test-name value="SuppressionController" />
+        <test-name value="create suppressions" />
+        <test-name value="should throw exception when missing auth user header" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="SuppressionController.root" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/suppressions/controller/suppressions.controller.spec.ts" />
+      <test-names>
+        <test-name value="SuppressionController" />
+        <test-name value="root" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.SuppressionController.create suppressions" />
+        <item itemvalue="Jest.SuppressionController.create suppressions.should throw exception when missing auth user header" />
+        <item itemvalue="Jest.SuppressionController.root" />
+        <item itemvalue="Jest.SuppressionController" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3f33a8f-0436-4844-9a5b-d35e0517eb08" name="Default Changelist" comment="" />
+      <created>1594305700200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594305700200</updated>
+      <workItem from="1594305702562" duration="33949000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="601" y="229" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594387937773">
+      <screen x="0" y="23" width="2048" height="1168" />
+    </state>
+    <state x="601" y="229" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1167@0.23.2048.1167" timestamp="1594387445831" />
+    <state x="601" y="229" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1168@0.23.2048.1168" timestamp="1594387937773" />
+    <state x="417" y="359" width="1306" height="759" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1594630346133">
+      <screen x="0" y="23" width="2048" height="1167" />
+    </state>
+    <state x="417" y="359" width="1306" height="759" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.2048.1167@0.23.2048.1167" timestamp="1594630346133" />
+    <state x="989" y="374" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594386873107">
+      <screen x="0" y="23" width="2048" height="1167" />
+    </state>
+    <state x="989" y="374" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2048.1167@0.23.2048.1167" timestamp="1594386873107" />
+    <state x="1054" y="456" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1594628379800">
+      <screen x="0" y="23" width="2048" height="1167" />
+    </state>
+    <state x="1054" y="456" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2048.1167@0.23.2048.1167" timestamp="1594628379800" />
+    <state x="1054" y="456" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2048.1168@0.23.2048.1168" timestamp="1594388955723" />
+    <state x="1054" y="457" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.2048.1171@0.23.2048.1171" timestamp="1594310830294" />
+    <state width="882" height="257" key="GridCell.Tab.0.bottom" timestamp="1594806470816">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state width="882" height="257" key="GridCell.Tab.0.bottom/0.23.2048.1165@0.23.2048.1165" timestamp="1594806470816" />
+    <state width="1464" height="257" key="GridCell.Tab.0.bottom/0.23.2048.1167@0.23.2048.1167" timestamp="1594630275759" />
+    <state width="1464" height="257" key="GridCell.Tab.0.bottom/0.23.2048.1168@0.23.2048.1168" timestamp="1594630115157" />
+    <state width="882" height="257" key="GridCell.Tab.0.center" timestamp="1594806470815">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state width="882" height="257" key="GridCell.Tab.0.center/0.23.2048.1165@0.23.2048.1165" timestamp="1594806470815" />
+    <state width="1464" height="257" key="GridCell.Tab.0.center/0.23.2048.1167@0.23.2048.1167" timestamp="1594630275759" />
+    <state width="1464" height="257" key="GridCell.Tab.0.center/0.23.2048.1168@0.23.2048.1168" timestamp="1594630115156" />
+    <state width="882" height="257" key="GridCell.Tab.0.left" timestamp="1594806470815">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state width="882" height="257" key="GridCell.Tab.0.left/0.23.2048.1165@0.23.2048.1165" timestamp="1594806470815" />
+    <state width="1464" height="257" key="GridCell.Tab.0.left/0.23.2048.1167@0.23.2048.1167" timestamp="1594630275758" />
+    <state width="1464" height="257" key="GridCell.Tab.0.left/0.23.2048.1168@0.23.2048.1168" timestamp="1594630115155" />
+    <state width="882" height="257" key="GridCell.Tab.0.right" timestamp="1594806470816">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state width="882" height="257" key="GridCell.Tab.0.right/0.23.2048.1165@0.23.2048.1165" timestamp="1594806470816" />
+    <state width="1464" height="257" key="GridCell.Tab.0.right/0.23.2048.1167@0.23.2048.1167" timestamp="1594630275759" />
+    <state width="1464" height="257" key="GridCell.Tab.0.right/0.23.2048.1168@0.23.2048.1168" timestamp="1594630115156" />
+    <state x="737" y="257" key="RollbackChangesDialog" timestamp="1594806561003">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state x="737" y="257" key="RollbackChangesDialog/0.23.2048.1165@0.23.2048.1165" timestamp="1594806561003" />
+    <state x="891" y="451" key="VCS.ChangelistChooser" timestamp="1594806519918">
+      <screen x="0" y="23" width="2048" height="1165" />
+    </state>
+    <state x="891" y="451" key="VCS.ChangelistChooser/0.23.2048.1165@0.23.2048.1165" timestamp="1594806519918" />
+    <state x="662" y="364" width="604" height="490" key="find.popup" timestamp="1594305962091">
+      <screen x="0" y="23" width="2048" height="1167" />
+    </state>
+    <state x="662" y="364" width="604" height="490" key="find.popup/0.23.2048.1167@0.23.2048.1167" timestamp="1594305962091" />
+    <state x="629" y="290" width="670" height="676" key="search.everywhere.popup" timestamp="1594628919786">
+      <screen x="0" y="23" width="2048" height="1167" />
+    </state>
+    <state x="629" y="290" width="670" height="676" key="search.everywhere.popup/0.23.2048.1167@0.23.2048.1167" timestamp="1594628919786" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main.ts</url>
+          <line>1</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main.ts</url>
+          <line>12</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/main.ts</url>
+          <line>2</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
