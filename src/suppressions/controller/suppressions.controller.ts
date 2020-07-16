@@ -45,10 +45,7 @@ export class SuppressionsController {
             throw new ConflictException();
         }
 
-        const suppressionResponseDto = await this.suppressionsService.create(suppression);
-
-        console.log(JSON.stringify(suppressionResponseDto));
-        return suppressionResponseDto;
+        return await this.suppressionsService.create(suppression);
     }
 
     @Patch('/{id}')

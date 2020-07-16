@@ -32,6 +32,4 @@ export class PaymentController {
         };
         return response;
     }
-
-
 }
