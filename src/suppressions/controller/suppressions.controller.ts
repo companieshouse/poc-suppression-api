@@ -2,7 +2,6 @@ import {
     Body,
     ConflictException,
     Controller,
-    ForbiddenException,
     Get,
     Headers,
     Param,
@@ -19,7 +18,6 @@ import {
 } from "@nestjs/swagger";
 import {SuppressionDto} from "../dto/suppression.dto";
 import {SuppressionResponseDto} from "../dto/suppression-response.dto";
-import {PaymentResponseDto} from "../dto/payment-response.dto";
 import {Suppression} from "../schemas/suppression.schema";
 
 @ApiTags('Suppression')
@@ -37,17 +35,20 @@ export class SuppressionsController {
                             @Headers('ERIC-Authorised-User') authorisedUser: string,
                             @Param('companyNumber') companyNumber: string,
                             @Body() suppression: SuppressionDto): Promise<SuppressionResponseDto> {
-
-        if (userId === null) {
-            throw new ForbiddenException();
-        }
+        //
+        // if (userId === null) {
+        //     throw new ForbiddenException();
+        // }
 
         const suppressions: Suppression[] = await this.suppressionsService.findAll(companyNumber);
         if (suppressions && suppressions.length > 0) {
             throw new ConflictException();
         }
 
-        return await this.suppressionsService.create(suppression);
+        const suppressionResponseDto = await this.suppressionsService.create(suppression);
+
+        console.log(JSON.stringify(suppressionResponseDto));
+        return suppressionResponseDto;
     }
 
     @Patch('/{id}')
@@ -61,11 +62,13 @@ export class SuppressionsController {
     }
 
     @Get('/{id}')
-    @ApiOperation({summary: 'Get suppression'})
-    @ApiOkResponse({description: 'SuppressionModel details', type: PaymentResponseDto})
-    getSuppression(@Headers('ERIC-identity') userId: string,
-                   @Headers('ERIC-Authorised-User') authorisedUser: string,
-                   @Param('companyNumber') companyNumber: string): PaymentResponseDto {
-        return new PaymentResponseDto();
+    @ApiOperation({summary: 'Get suppressions'})
+    @ApiOkResponse({description: 'SuppressionModel details', type: Suppression})
+    async getSuppression(@Headers('ERIC-identity') userId: string,
+                         @Headers('ERIC-Authorised-User') authorisedUser: string,
+                         @Param('companyNumber') companyNumber: string,
+                         @Param('id') id: string): Promise<Suppression[]> {
+
+        return await this.suppressionsService.findById(id);
     }
 }

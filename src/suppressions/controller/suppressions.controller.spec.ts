@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SuppressionsController } from './suppressionsController';
+import { SuppressionsController } from './suppressions.controller';
 import { SuppressionsService } from '../service/suppressions.service';
 import {Suppression} from "../schemas/suppression.schema";
 import {getModelToken} from "@nestjs/mongoose";
@@ -22,7 +22,7 @@ describe('SuppressionController', () => {
 
   describe('retrieve suppressions', () => {
     it('should return suppression', () => {
-      expect(suppressionController.getSuppression('123', 'testUser', '1'))
+      expect(suppressionController.getSuppression('123', 'testUser', '1', '1'))
           .toStrictEqual(new PaymentResponseDto());
     });
   });

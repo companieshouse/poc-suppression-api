@@ -3,13 +3,13 @@ import {Document} from "mongoose";
 
 @Schema()
 export class Suppression extends Document {
-    @Prop({ required: true} )
-    name: string;
+    @Prop()
+    fullName: string;
 
-    @Prop({ required: true} )
+    @Prop()
     email: string;
 
-    @Prop({ required: true} )
+    @Prop()
     companyNumber: string;
 }
 

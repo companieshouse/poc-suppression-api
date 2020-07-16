@@ -9,7 +9,7 @@ import {LinksDto} from "../dto/links.dto";
 function generateLinks(companyNumber: string, id: string): LinksDto {
   const links: LinksDto = new LinksDto();
   links.self = `companies/${companyNumber}/suppressions/${id}`;
-  links.payment = `companies/${companyNumber}/suppressions/${id}/payments`;
+  links.payment = `companies/${companyNumber}/suppressions/${id}/payment`;
   return links;
 }
 
@@ -21,12 +21,13 @@ export class SuppressionsService {
   async create(suppressionDto: SuppressionDto): Promise<SuppressionResponseDto> {
 
     const suppressionSchema: Suppression = new this.suppressionModel(suppressionDto);
+
     const suppression: Suppression = await suppressionSchema.save();
 
     const response: SuppressionResponseDto = new SuppressionResponseDto();
     const id: string = suppression._id;
     response.id = id;
-    response.links = generateLinks(suppression.companyNumber, id);
+    response.links = generateLinks('123', id);
 
     return response;
   }
@@ -37,5 +38,9 @@ export class SuppressionsService {
 
   async findAll(companyNumber: string): Promise<Suppression[]> {
     return await this.suppressionModel.find({companyNumber: companyNumber}).exec();
+  }
+
+  async findById(id: string): Promise<Suppression[]> {
+    return await this.suppressionModel.find({_id: id}).exec();
   }
 }

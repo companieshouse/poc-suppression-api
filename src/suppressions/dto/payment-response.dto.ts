@@ -1,15 +1,15 @@
-import {LinksDto} from "./links.dto";
 import {ItemDto} from "./item.dto";
 import {ApiProperty} from "@nestjs/swagger";
+import {PaymentLinksDto} from "./payment-links.dto";
 
 export class PaymentResponseDto {
 
     @ApiProperty()
-    readonly etag: string;
+    etag: string;
     @ApiProperty()
-    readonly kind: string;
+    kind: string;
     @ApiProperty()
-    readonly links: LinksDto;
+    links: PaymentLinksDto;
     @ApiProperty()
-    readonly items: ItemDto[];
+    items: ItemDto[];
 }
