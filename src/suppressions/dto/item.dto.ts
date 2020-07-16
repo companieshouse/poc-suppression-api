@@ -5,19 +5,19 @@ export class ItemDto {
     @ApiProperty()
     readonly description: string;
     @ApiProperty()
-    readonly descriptionIdentifier: string;
+    readonly description_identifier: string;
     @ApiProperty()
-    readonly descriptionValues: string;
+    readonly description_values: Map<string, string>;
     @ApiProperty()
-    readonly productTypes: string;
+    readonly product_type: string;
     @ApiProperty()
     readonly amount: string;
     @ApiProperty()
-    readonly availablePaymentMethods: string[];
+    readonly available_payment_methods: string[];
     @ApiProperty()
-    readonly classOfPayment: string[];
+    readonly class_of_payment: string[];
     @ApiProperty()
     readonly kind: string;
     @ApiProperty()
-    readonly resourceKind: string;
+    readonly resource_kind: string;
 }

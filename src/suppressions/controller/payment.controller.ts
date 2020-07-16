@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Headers, Param, Patch} from "@nestjs/common";
+import {Body, Controller, Get, Param, Patch} from "@nestjs/common";
 import {ApiNoContentResponse, ApiOkResponse, ApiOperation, ApiTags} from "@nestjs/swagger";
 import {Suppression} from "../schemas/suppression.schema";
 import {SuppressionsService} from "../service/suppressions.service";
@@ -18,6 +18,8 @@ export class PaymentController {
     async getPayment(@Param('companyNumber') companyNumber: string,
                      @Param('id') id: string): Promise<PaymentResponseDto> {
 
+        console.log(`GET /companies/${companyNumber}/suppressions/${id}/payment`);
+
         const suppressions: Suppression[] = await this.suppressionsService.findById(id);
 
         const suppression: Suppression = suppressions[0];
@@ -25,12 +27,25 @@ export class PaymentController {
         console.log(JSON.stringify(suppression));
 
         const response: PaymentResponseDto = new PaymentResponseDto();
-        response.etag = '123';
+        response.ETag = '123';
         response.kind = 'suppression';
         response.links = {
             self: `/companies/${companyNumber}/suppressions/${id}/payment`,
-            suppressionRequest: `/companies/${companyNumber}/suppressions/${id}`
+            suppression_request: `/companies/${companyNumber}/suppressions/${id}`
         };
+        response.items = [
+            {
+                amount: '32',
+                description: 'Suppression application',
+                description_identifier: 'Suppression application',
+                description_values: new Map<string,string>(),
+                product_type: 'Suppression application',
+                available_payment_methods: ['credit-card'],
+                class_of_payment: ['data-maintenance'],
+                kind: 'suppression-request#payment-details',
+                resource_kind: 'suppression-request#suppression-request'
+            }
+        ];
         return response;
     }
 
@@ -40,7 +55,6 @@ export class PaymentController {
     updatePayment(@Param('companyNumber') companyNumber: string,
                   @Param('id') id: string,
                   @Body() payment: PaymentDto): void {
-        // update payment
-        console.log('PATCH /companies/:companyNumber/suppressions/:id/payment - TO-DO')
+        console.log(`PATCH /companies/${companyNumber}/suppressions/${id}/payment - to-do`)
     }
 }

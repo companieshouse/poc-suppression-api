@@ -7,5 +7,5 @@ export class PaymentLinksDto {
     self: string;
     @IsString()
     @ApiProperty()
-    suppressionRequest: string;
+    suppression_request: string;
 }

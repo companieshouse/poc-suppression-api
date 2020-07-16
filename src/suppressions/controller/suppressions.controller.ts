@@ -39,6 +39,8 @@ export class SuppressionsController {
         //     throw new ForbiddenException();
         // }
 
+        console.log(`POST /companies/${companyNumber}/suppressions`);
+
         const suppressions: Suppression[] = await this.suppressionsService.findAll(companyNumber);
         if (suppressions && suppressions.length > 0) {
             throw new ConflictException();
@@ -55,6 +57,7 @@ export class SuppressionsController {
                          @Param('companyNumber') companyNumber: string,
                          @Param('id') id: string): Promise<Suppression[]> {
 
+        console.log(`GET /companies/${companyNumber}/suppressions/${id}`);
         return await this.suppressionsService.findById(id);
     }
 }

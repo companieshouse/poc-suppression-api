@@ -5,7 +5,7 @@ import {PaymentLinksDto} from "./payment-links.dto";
 export class PaymentResponseDto {
 
     @ApiProperty()
-    etag: string;
+    ETag: string;
     @ApiProperty()
     kind: string;
     @ApiProperty()
