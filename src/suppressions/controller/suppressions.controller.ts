@@ -5,14 +5,13 @@ import {
     Get,
     Headers,
     Param,
-    Patch,
     Post
 } from '@nestjs/common';
 import {SuppressionsService} from '../service/suppressions.service';
 import {
     ApiConflictResponse, ApiConsumes,
     ApiCreatedResponse,
-    ApiNoContentResponse, ApiOkResponse,
+    ApiOkResponse,
     ApiOperation,
     ApiTags
 } from "@nestjs/swagger";
@@ -46,16 +45,6 @@ export class SuppressionsController {
         }
 
         return await this.suppressionsService.create(suppression);
-    }
-
-    @Patch('/{id}')
-    @ApiOperation({summary: 'Update suppression'})
-    @ApiNoContentResponse({description: 'No content'})
-    updateSuppression(@Headers('ERIC-identity') userId: string,
-                      @Headers('ERIC-Authorised-User') authorisedUser: string,
-                      @Param('companyNumber') companyNumber: string,
-                      @Body() suppression: SuppressionDto): string {
-        return this.suppressionsService.update();
     }
 
     @Get('/{id}')

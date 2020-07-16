@@ -32,10 +32,6 @@ export class SuppressionsService {
         return links;
     }
 
-    update(): string {
-        return 'Hello World!';
-    }
-
     async findAll(companyNumber: string): Promise<Suppression[]> {
         return await this.suppressionModel.find({companyNumber: companyNumber}).exec();
     }
