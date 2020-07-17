@@ -10,7 +10,7 @@ $ npm install
 
 ## Running the app
 
-This application requires a local instance of mongodb.
+This application requires a docker or local instance of mongodb.
 
 ```bash
 # development
@@ -38,3 +38,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Dockerise app
+
+Build image:
+```bash
+docker build --ssh default -t poc-suppression-api:latest .
+```
+
+Run:
+```bash
+docker-compose up
+```
+
+Navigate to: http://localhost:3000/api

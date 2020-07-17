@@ -1,7 +1,17 @@
 version: "3.8"
 
 services:
-  poc-suppression-web:
-    image: 169942020521.dkr.ecr.eu-west-1.amazonaws.com/local/poc-suppression-api:latest
+  poc-suppression-api:
+    image: poc-suppression-api:latest
     expose:
       - 3000
+    ports:
+      - 3000:3000
+    environment:
+      - SUPPRESSION_API_MONGODB_URL=mongodb://mongo:27017/suppressions
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
