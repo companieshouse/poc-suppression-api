@@ -4,18 +4,18 @@ import {ApiProperty} from "@nestjs/swagger";
 export class AddressDto {
 
     @IsString()
-    @ApiProperty()
-    readonly addressLine1: string;
+    @ApiProperty({required: false})
+    addressLine1: string;
     @IsString()
-    @ApiProperty()
-    readonly addressLine2: string;
+    @ApiProperty({required: false})
+    addressLine2: string;
     @IsString()
-    @ApiProperty()
-    readonly townOrCity: string;
+    @ApiProperty({required: false})
+    townOrCity: string;
     @IsString()
-    @ApiProperty()
-    readonly county: string;
+    @ApiProperty({required: false})
+    county: string;
     @IsString()
-    @ApiProperty()
-    readonly postCode: string;
+    @ApiProperty({required: false})
+    postCode: string;
 }

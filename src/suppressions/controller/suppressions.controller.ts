@@ -3,14 +3,14 @@ import {
     ConflictException,
     Controller,
     Get,
-    Headers,
+    Headers, NotFoundException,
     Param,
     Post
 } from '@nestjs/common';
 import {SuppressionsService} from '../service/suppressions.service';
 import {
     ApiConflictResponse, ApiConsumes,
-    ApiCreatedResponse,
+    ApiCreatedResponse, ApiNotFoundResponse,
     ApiOkResponse,
     ApiOperation,
     ApiTags
@@ -41,7 +41,7 @@ export class SuppressionsController {
 
         console.log(`POST /companies/${companyNumber}/suppressions`);
 
-        const suppressions: Suppression[] = await this.suppressionsService.findAll(companyNumber);
+        const suppressions: Suppression[] = await this.suppressionsService.findByCompanyNumber(companyNumber);
         if (suppressions && suppressions.length > 0) {
             throw new ConflictException();
         }
@@ -49,15 +49,26 @@ export class SuppressionsController {
         return await this.suppressionsService.create(suppression);
     }
 
-    @Get('/{id}')
+    @Get('/:id')
     @ApiOperation({summary: 'Get suppressions'})
-    @ApiOkResponse({description: 'SuppressionModel details', type: Suppression})
+    @ApiOkResponse({description: 'SuppressionModel details', type: SuppressionDto})
+    @ApiNotFoundResponse({description: 'suppressionNotFound'})
     async getSuppression(@Headers('ERIC-identity') userId: string,
                          @Headers('ERIC-Authorised-User') authorisedUser: string,
                          @Param('companyNumber') companyNumber: string,
-                         @Param('id') id: string): Promise<Suppression[]> {
+                         @Param('id') id: string): Promise<SuppressionDto> {
 
         console.log(`GET /companies/${companyNumber}/suppressions/${id}`);
-        return await this.suppressionsService.findById(id);
+        const suppressions: Suppression[] = await this.suppressionsService.findAll();
+
+        for (const s of suppressions) {
+            if (s._id.toString() === id) {
+                const suppressionDto: SuppressionDto = new SuppressionDto();
+                suppressionDto.fullName = s.fullName;
+                suppressionDto.email = s.email;
+                return suppressionDto;
+            }
+        }
+        throw new NotFoundException();
     }
 }
