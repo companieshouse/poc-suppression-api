@@ -32,12 +32,12 @@ export class SuppressionsService {
         return links;
     }
 
-    async findAll(companyNumber: string): Promise<Suppression[]> {
+    async findByCompanyNumber(companyNumber: string): Promise<Suppression[]> {
         return await this.suppressionModel.find({companyNumber: companyNumber}).exec();
     }
 
-    async findById(id: string): Promise<Suppression[]> {
-        return await this.suppressionModel.find({_id: id}).exec();
+    async findAll(): Promise<Suppression[]> {
+        return await this.suppressionModel.find().exec();
     }
 
 }

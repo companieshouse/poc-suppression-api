@@ -6,17 +6,14 @@ import {DocumentDto} from "./document.dto";
 export class SuppressionDto {
     @IsString()
     @ApiProperty()
-    readonly fullName: string;
+    fullName: string;
     @IsString()
     @ApiProperty()
-    readonly email: string;
-    @IsObject()
-    @ApiProperty()
-    readonly oldAddress: AddressDto;
-    @IsObject()
-    @ApiProperty()
-    readonly newAddress: AddressDto;
-    @IsObject()
-    @ApiProperty()
-    readonly document: DocumentDto;
+    email: string;
+    @ApiProperty({required: false})
+    oldAddress: AddressDto;
+    @ApiProperty({required: false})
+    newAddress: AddressDto;
+    @ApiProperty({required: false})
+    document: DocumentDto;
 }

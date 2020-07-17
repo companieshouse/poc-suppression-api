@@ -9,9 +9,6 @@ import {PaymentDto} from "../dto/payment.dto";
 @Controller('/companies/:companyNumber/suppressions/:id/payment')
 export class PaymentController {
 
-    constructor(private readonly suppressionsService: SuppressionsService) {
-    }
-
     @Get()
     @ApiOperation({summary: 'Get payment'})
     @ApiOkResponse({description: 'Payment details', type: PaymentResponseDto})
@@ -19,12 +16,6 @@ export class PaymentController {
                      @Param('id') id: string): Promise<PaymentResponseDto> {
 
         console.log(`GET /companies/${companyNumber}/suppressions/${id}/payment`);
-
-        const suppressions: Suppression[] = await this.suppressionsService.findById(id);
-
-        const suppression: Suppression = suppressions[0];
-
-        console.log(JSON.stringify(suppression));
 
         const response: PaymentResponseDto = new PaymentResponseDto();
         response.ETag = '123';
@@ -38,7 +29,7 @@ export class PaymentController {
                 amount: '32',
                 description: 'Suppression application',
                 description_identifier: 'Suppression application',
-                description_values: new Map<string,string>(),
+                description_values: new Map<string, string>(),
                 product_type: 'Suppression application',
                 available_payment_methods: ['credit-card'],
                 class_of_payment: ['data-maintenance'],

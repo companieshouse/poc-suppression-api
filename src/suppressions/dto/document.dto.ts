@@ -4,15 +4,15 @@ import {ApiProperty} from "@nestjs/swagger";
 export class DocumentDto {
 
     @IsString()
-    @ApiProperty()
-    readonly companyName: string;
+    @ApiProperty({required: false})
+    companyName: string;
     @IsString()
     @ApiProperty()
-    readonly companyNumber: string;
+    companyNumber: string;
     @IsString()
-    @ApiProperty()
-    readonly type: string;
+    @ApiProperty({required: false})
+    type: string;
     @IsString()
-    @ApiProperty()
-    readonly registrationDate: string;
+    @ApiProperty({required: false})
+    registrationDate: string;
 }
